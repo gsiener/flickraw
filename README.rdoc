@@ -1,4 +1,5 @@
 = Flickraw
+[![Build Status](https://travis-ci.org/gsiener/flickraw.png)](https://travis-ci.org/gsiener/flickraw)
 
 Flickraw is a library to access flickr[http://flickr.com] api in a simple way.
 It maps exactly the methods described in {the official api documentation}[http://www.flickr.com/services/api].
