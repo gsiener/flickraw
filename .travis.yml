@@ -1,0 +1,10 @@
+language: ruby
+
+branches:
+  only:
+    - master
+
+rvm:
+  - 2.0.0
+
+script: "bundle exec rake test"
