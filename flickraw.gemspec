@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.version = FlickRaw::VERSION
   s.files = Dir["examples/*.rb"] + Dir["test/*.rb"] + Dir["lib/**/*.rb"] + %w{flickraw_rdoc.rb LICENSE README.md rakefile}
   
+  s.add_dependency 'nokogiri'
   s.add_development_dependency 'dotenv'
   s.add_development_dependency 'rake'
 end
