@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.files = Dir["examples/*.rb"] + Dir["test/*.rb"] + Dir["lib/**/*.rb"] + %w{flickraw_rdoc.rb LICENSE README.rdoc rakefile}
   
   s.add_development_dependency 'dotenv'
+  s.add_development_dependency 'rake'
 end
