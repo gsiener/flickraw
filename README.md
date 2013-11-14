@@ -1,5 +1,8 @@
-= Flickraw
 [![Build Status](https://travis-ci.org/gsiener/flickraw.png)](https://travis-ci.org/gsiener/flickraw)
+
+Flickraw
+=========
+
 
 Flickraw is a library to access flickr[http://flickr.com] api in a simple way.
 It maps exactly the methods described in {the official api documentation}[http://www.flickr.com/services/api].
@@ -8,7 +11,7 @@ The methods are fetched from flickr when loading the library by using introspect
 
 The github repository: http://github.com/hanklords/flickraw
 
-= Installation
+## Installation
 Type this in a console (you might need to be superuser)
 
  gem install json (This is only necessary on ruby 1.8)
@@ -18,7 +21,7 @@ This will recreate the documentation by fetching the methods descriptions from f
  $ cd flickraw
  $ rake rdoc
 
-= Features
+## Features
 
 * Minimal dependencies
 * Complete support of flickr API. This doesn't require an update of the library
@@ -29,9 +32,9 @@ This will recreate the documentation by fetching the methods descriptions from f
 * Proxy support
 * Flickr URLs helpers
 
-= Usage
+## Usage
 
-== Simple
+### Simple
 
  require 'flickraw'
 
@@ -53,7 +56,7 @@ This will recreate the documentation by fetching the methods descriptions from f
  original = sizes.find {|s| s.label == 'Original' }
  puts original.width       # => "800" -- may fail if they have no original marked image
 
-== Authentication
+### Authentication
 
   require 'flickraw'
 
@@ -93,7 +96,7 @@ If you need to have several users authenticated at the same time in your applica
 
   flickr = FlickRaw::Flickr.new
 
-== Upload
+### Upload
 
   require 'flickraw'
 
@@ -105,46 +108,46 @@ If you need to have several users authenticated at the same time in your applica
   # You need to be authentified to do that, see the previous examples.
   flickr.upload_photo PHOTO_PATH, :title => "Title", :description => "This is the description"
 
-== Proxy
+### Proxy
 
   require 'flickraw'
   FlickRaw.proxy = "http://user:pass@proxy.example.com:3129/"
 
-== Secure endpoints
+### Secure endpoints
 
   require 'flickraw'
   FlickRaw.secure = true
 
-== Flickr URL Helpers
+### Flickr URL Helpers
 
 There are some helpers to build flickr urls :
 
-=== url, url_m, url_s, url_t, url_b, url_z, url_q, url_n, url_c, url_o
+#### url, url_m, url_s, url_t, url_b, url_z, url_q, url_n, url_c, url_o
 
   info = flickr.photos.getInfo(:photo_id => "3839885270")
   FlickRaw.url_b(info) # => "http://farm3.static.flickr.com/2485/3839885270_6fb8b54e06_b.jpg"
 
-=== url_profile
+#### url_profile
 
   info = flickr.photos.getInfo(:photo_id => "3839885270")
   FlickRaw.url_profile(info) # => "http://www.flickr.com/people/41650587@N02/"
 
-=== url_photopage
+#### url_photopage
 
   info = flickr.photos.getInfo(:photo_id => "3839885270")
   FlickRaw.url_photopage(info) # => "http://www.flickr.com/photos/41650587@N02/3839885270"
 
-=== url_photoset, url_photosets
+#### url_photoset, url_photosets
 
   info = flickr.photos.getInfo(:photo_id => "3839885270")
   FlickRaw.url_photosets(info) # => "http://www.flickr.com/photos/41650587@N02/sets/"
 
-=== url_short, url_short_m, url_short_s, url_short_t
+#### url_short, url_short_m, url_short_s, url_short_t
 
   info = flickr.photos.getInfo(:photo_id => "3839885270")
   FlickRaw.url_short(info) # => "http://flic.kr/p/6Rjq7s"
 
-=== url_photostream
+#### url_photostream
 
   info = flickr.photos.getInfo(:photo_id => "3839885270")
   FlickRaw.url_photostream(info) # => "http://www.flickr.com/photos/41650587@N02/"
@@ -152,7 +155,7 @@ There are some helpers to build flickr urls :
 
 See the _examples_ directory to find more examples.
 
-== Cached version
+### Cached version
 
 You can use
 
