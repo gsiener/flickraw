@@ -5,6 +5,7 @@ $:.unshift lib unless $:.include?(lib)
 
 require 'test/unit'
 require 'helper'
+require 'pry'
 
 class Basic < Test::Unit::TestCase
   def test_request
