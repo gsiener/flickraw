@@ -2,6 +2,7 @@ lib = File.expand_path('../../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
 
 require 'flickraw'
+require 'pry'
 
 FlickRaw.api_key = ENV['FLICKRAW_API_KEY']
 FlickRaw.shared_secret = ENV['FLICKRAW_SHARED_SECRET']
