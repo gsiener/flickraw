@@ -8,7 +8,7 @@ require 'helper'
 
 class Upload < Test::Unit::TestCase
   def test_upload
-    path = File.dirname(__FILE__) + '/image testée.jpg'
+    path = File.dirname(__FILE__) + '/image_fixture.jpg'
     u = info = nil
     title = "Titre de l'image testée"
     description = "Ceci est la description de l'image testée"
